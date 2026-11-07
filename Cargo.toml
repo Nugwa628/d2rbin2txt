@@ -1,0 +1,14 @@
+[package]
+name = "d2rbin2txt"
+version = "1.0.0"
+edition = "2021"
+description = "Drop Diablo II: Resurrected excel .bin files in, get tab-separated .txt files out"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
